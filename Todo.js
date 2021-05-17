@@ -18,28 +18,5 @@ export class Todo {
                 this.usuario = usuario;
 		this.estado = estado;
 	}
-
-	getId(){
-		return this.id;
-	}
-
-	getTexto(){
-		return this.texto;
-	}
-
-	getfechaInicio(){
-		return this.fechaInicio;
-	}
-
-	getFechaFin(){
-		return this.fechaFin;
-	}
-
-	getUsuario(){
-		return this.usuario;
-	}
-
-	getEstado(){
-		return this.estado;
-	}	
+	
 }
