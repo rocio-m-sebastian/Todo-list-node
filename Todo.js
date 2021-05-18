@@ -1,22 +1,20 @@
-export class Todo {
-	id;
-	texto;
-	fechaInicio;
-	fechaFin;
-	usuario;
-	estado = {
-		p: "Pendiente",
-		e: "En ejecución",
-		f: "Finalizada"
-	}
-
+module.exports = class Todo {
 	constructor(id, texto, fechaInicio, fechaFin, usuario, estado){
 		this.id = id;
 		this.texto = texto;
 		this.fechaInicio = fechaInicio;
-                this.fechaFin = fechaFin;
-                this.usuario = usuario;
-		this.estado = estado;
+		this.fechaFin = fechaFin;
+		this.usuario = usuario;
+		console.log('entra aquí');
+
+		if (estado === 3) {
+			this.estado = 'acabado';
+		} else if (estado === 2) {
+			this.estado = 'en ejecución'
+		} else {
+			console.log('entra aquí');
+			this.estado = 'pendiente'
+		}
 	}
 	
 }
