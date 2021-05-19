@@ -21,14 +21,6 @@ export default class TodoList{
 		}
 	}
 
-	mostrarTarea(id){
-		for(let i in this.todos){
-			if(id === this.todos[i].id){
-				return this.todos[i];
-			}
-		}
-	}
-
 	actualizarTarea(id, texto) {
 		for(let i in this.todos) {
 			if(id === this.todos[i].id) {
