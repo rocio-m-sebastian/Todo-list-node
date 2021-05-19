@@ -1,15 +1,10 @@
 const TodoList = require('./TodoList.js');
+const Todo = require('./Todo.js');
 
-const lista1 = [{ "id": 1,"texto": "texto tarea 1","fechaInicio": "15-05-2021","fechaFin": "15-05-2021","usuario": "Julia","estado": 1}, { "id": 2,"texto": "texto tarea 2","fechaInicio": "15-05-2021","fechaFin": "15-05-2021","usuario": "Carlos","estado": 1}];
+let lista = new TodoList();
 
-const lista = new TodoList(lista1);
-
+lista.crearTarea("texto 2","15-05-2021","15-05-2021","usuario",1);
 console.log(lista);
-console.log(lista.todoList[0].id);
 
-lista.crearTarea(3,"texto3","15-05-2021","15-05-2021","usuario",1);
-console.log(lista);
-console.log(lista.todoList[1]);
-
-lista.actualizarTarea(3, 'nuevo texto tarea 3');
+lista.actualizarTarea(1621413342510, 'nuevo texto tarea...');
 console.log('lista modificada', lista);
