@@ -45,7 +45,7 @@ function crearTarea(){
     //const todo = new Todo();
     const prompt = require('prompt-sync')({sigint: true});
 
-    console.log("==Crear==\n");
+    console.log("==Crear una tarea==\n");
     var texto = prompt("Escribe el texto:");
     //todo.texto = texto;
 
@@ -65,23 +65,41 @@ function crearTarea(){
 }
 
 function updateTarea(){
-    console.clear();
-    console.log("update");
+    const prompt = require('prompt-sync')({sigint: true});
+
+    console.log("==Actualizar tarea==\n");
+    var id = prompt("Escribe el id de la tarea a actualizar:");
+
+    var texto = prompt("Escribe el texto:");
+
+    todoList.actualizarTarea(id,texto);
 }
 
 function borrarTarea(){
-    console.clear();
-    console.log("borrar");
+    const prompt = require('prompt-sync')({sigint: true});
+
+    console.log("==Borrar una tarea==\n");
+    var id = prompt("Escribe el id de la tarea a borrar:");
+    
+    //console.log(todoList.mostrarTarea(id));
+    todoList.borrarTarea(id);
 }
 
 function listarTareas(){
-    console.clear();
-    console.log("listars");
+    //const prompt = require('prompt-sync')({sigint: true});
+
+    console.log("==Listar tareas==\n");
+    
+    console.log(todoList.mostrarAllTarea());
 }
 
 function listarUnaTarea(){
-    console.clear();
-    console.log("listar");
+    const prompt = require('prompt-sync')({sigint: true});
+
+    console.log("==Listar una tarea==\n");
+    var id = prompt("Escribe el id de la tarea a listar:");
+    
+    console.log(todoList.mostrarTarea(id));
 }
 readCosnole();
 /*function fer(){
