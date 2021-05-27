@@ -1,5 +1,5 @@
 module.exports =  class Todo {
-	/*constructor(texto, fechaInicio, fechaFin, usuario, estado){
+	constructor(texto, fechaInicio, fechaFin, usuario, estado){
 		this.id = new Date().getTime();
 		this.texto = texto;
 		this.fechaInicio = fechaInicio;
@@ -13,24 +13,5 @@ module.exports =  class Todo {
 		} else {
 			this.estado = 'pendiente'
 		}
-	}*/
-	id;
-	texto;
-	fechaInicio;
-	fechaFin;
-	usuario;
-	estado = {
-		p: "Pendiente",
-		e: "En ejecución",
-		f: "Finalizada"
-	}
-
-	constructor(texto, fechaInicio, fechaFin, usuario, estado){
-		this.id = new Date().getTime();
-		this.texto = texto;
-		this.fechaInicio = fechaInicio;
-		this.fechaFin = fechaFin;
-		this.usuario = usuario;
-		this.estado = estado;
 	}
 }

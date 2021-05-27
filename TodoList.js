@@ -13,34 +13,34 @@ module.exports = class TodoList{
 	}
 
 	mostrarTarea(id){
-		for(let i in this.todos){
-			if(id === this.todos[i].id){
-				console.log("existeix");
-				return this.todos[i];
+		this.todos.forEach(function(item,index,array){
+			if(id == item.id){
+				console.log(item);
 			}
-		}
+		});
 	}
 	mostrarAllTarea(){
 		return this.todos;
 	}
 
 	actualizarTarea(id, texto) {
-		for(let i in this.todos) {
-			if(id === this.todos[i].id) {
-				this.todos[i].texto = texto;
-				this.guardarDB(this.todos);
-				return this.todos[i];
+		this.todos.forEach(function(item,index,array){
+			if(id == item.id){
+				item.texto = texto;
+				console.log(item);
 			}
-		}
+		});
+		this.guardarDB(this.todos);
 	}
 
 	borrarTarea(id){
-		for(let i in this.todos){
-			if(id === this.todos[i].id){
-				this.todos.splice(i,1);
-				this.guardarDB(this.todos);
+		this.todos.forEach(function(item,index,array){
+			if(id == item.id){
+				array.splice(index,1);
+				console.log("Tarea borrada!");
 			}
-		}
+		});
+		this.guardarDB(this.todos);
 	}
 
 	guardarDB(td) {
