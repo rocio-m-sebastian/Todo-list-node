@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/rocio-m-sebastian/todo-list-node#readme",
   "dependencies": {
-    "inquirer": "^8.0.0",
-    "lowdb": "^1.0.0"
+    "inquirer": "^8.0.0"
   }
 }
